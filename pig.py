@@ -1,12 +1,12 @@
 import random
 
 class Die:
-    ## models a single 6 sided die.
+    ## models a single 6 sided die
     def roll(self):
         return random.randint(1, 6)
 
 class Player:
-    ## makes a single player and tracks their total score.
+    ## makes a single player and tracks their total score
     def __init__(self, name):
         self.name = name
         self.score = 0
@@ -15,7 +15,7 @@ class Player:
         self.score += points
 
 class Game:
-    ## make the game environment and conditions and turn logic.
+    ## make the game environment and conditions and turn logic
     def __init__(self):
         self.players = [Player("Player 1"), Player("Player 2")]
         self.die = Die()
@@ -59,7 +59,7 @@ class Game:
             
             ## checks for win condition immediately after a player holds
             if current_player.score >= 100:
-                print(f"\n🎉 {current_player.name} wins with a score of {current_player.score}! 🎉")
+                print(f"\n {current_player.name} wins with a score of {current_player.score}! ")
                 break
                 
             ## switchs to the other player
